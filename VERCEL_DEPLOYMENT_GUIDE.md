@@ -14,7 +14,7 @@ This guide will help you deploy your Next.js application to Vercel with all feat
 
 ### Step 1: Push Code to GitHub
 
-Your code is already on GitHub at: `https://github.com/JibbranAli/job-saviour-updated.git`
+Your code is already on GitHub at: `https://github.com/LWindia/job-saviour-updated.git`
 
 ### Step 2: Connect to Vercel
 
@@ -48,8 +48,13 @@ Vercel should auto-detect these settings:
 
 **Example:**
 ```
-NEXT_PUBLIC_GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/AKfycby123xyz456/exec
+NEXT_PUBLIC_GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/AKfycbyP8z3oQArRGoRQAV4M07DewXUAA997Y0vaU3rF1OerW0n5QK9Klz8wY7xbXc_r-vPOLQ/exec
 ```
+
+**⚠️ IMPORTANT**: 
+- This environment variable MUST be set in Vercel for the Lead Capture Popup to work
+- Without it, the popup will show an error when users try to submit
+- After adding the variable, you may need to redeploy for it to take effect
 
 ### Step 5: Deploy
 

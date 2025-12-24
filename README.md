@@ -29,8 +29,37 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Environment Variables Setup
+
+### For Local Development:
+1. Copy `.env.example` to `.env.local`:
+   ```bash
+   cp .env.example .env.local
+   ```
+2. Add your Google Apps Script URL in `.env.local`:
+   ```
+   NEXT_PUBLIC_GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
+   ```
+
+### For Vercel Deployment:
+1. Go to Vercel Dashboard → Your Project → Settings → Environment Variables
+2. Add new variable:
+   - **Name**: `NEXT_PUBLIC_GOOGLE_SCRIPT_URL`
+   - **Value**: Your Google Apps Script Web App URL
+   - **Environment**: Select all (Production, Preview, Development)
+3. Click **Save**
+4. Redeploy your application
+
+**Important**: The Google Script URL must be set in Vercel environment variables for the Lead Capture Popup to work in production.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+**Quick Deploy Steps:**
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Add environment variable `NEXT_PUBLIC_GOOGLE_SCRIPT_URL` (see above)
+4. Deploy!
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

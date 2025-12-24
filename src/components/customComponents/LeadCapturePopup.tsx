@@ -337,7 +337,9 @@ export default function LeadCapturePopup({
 
           {submitStatus === 'error' && (
             <div className="text-red-600 text-sm font-medium p-2 bg-red-50 rounded">
-              ❌ Please fill all fields correctly and try again.
+              {!googleScriptUrl 
+                ? '❌ Configuration error. Please contact support.'
+                : '❌ Please fill all fields correctly and try again.'}
             </div>
           )}
 
