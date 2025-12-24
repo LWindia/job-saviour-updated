@@ -101,10 +101,6 @@ const CompaniesCarousel = () => {
           <br />
           <span className="text-[#ff0000]">LinuxWorld Students </span> 🤝
         </div>
-        <div className="text-md px-2 text-center text-gray-800 pt-2 md:pt-4 pb-8">
-          Get an opportunity to learn from the World Record Holder -{" "}
-          <span className="text-[#ff0000]">Mr Vimal Daga</span>
-        </div>
         <div className="w-full overflow-hidden">
           {chunkedLogos.map((lineLogos, rowIndex) => (
             <div

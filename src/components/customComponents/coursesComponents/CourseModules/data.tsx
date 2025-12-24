@@ -199,126 +199,110 @@ export const modules: Module[] = [
   {
     "id": 4,
     "title": "Module 4",
-    "subtitle": "Kubernetes",
+    "subtitle": "Linux",
     "topics": [
       {
-        "id": 7,
-        "title": "Lab Setup",
+        "id": 59,
+        "title": "Introduction to Linux for DevOps",
         "content": [
-          "Setting up a Minikube cluster for Kubernetes practice."
+          "Why Linux for DevOps?",
+          "Overview of Linux in cloud, automation, and containerized environments.",
+          "Key distributions used in the industry (Ubuntu, CentOS, RHEL)."
         ]
       },
       {
-        "id": 8,
-        "title": "Introduction to Kubernetes",
+        "id": 60,
+        "title": "Linux Architecture and Command Line Basics",
         "content": [
-          "Understanding Kubernetes and its components."
+          "Linux kernel, shell, and file system hierarchy.",
+          "Essential CLI commands for navigation and file management."
         ]
       },
       {
-        "id": 9,
-        "title": "Working with Pods",
+        "id": 61,
+        "title": "User and Permission Management",
         "content": [
-          "What is a pod and how to create one using the command line and YAML file.",
-          "Interacting with Kubernetes clusters and deleting all pods."
+          "User and Group Management: Adding, modifying, and deleting users and groups.",
+          "Understanding /etc/passwd, /etc/group, and /etc/shadow.",
+          "Permissions and Ownership: File and directory permissions (read, write, execute).",
+          "Managing ownership with chown and permissions with chmod.",
+          "Access Control Lists (ACLs) for advanced permission management."
         ]
       },
       {
-        "id": 10,
-        "title": "Labels & Load Balancers",
+        "id": 62,
+        "title": "Process and Service Management",
         "content": [
-          "Working with labels and selectors to organize resources.",
-          "Understanding Replication Controllers, Replica Sets, and scaling pods.",
-          "Configuring load balancers and creating Replica Sets."
+          "Managing Processes: Monitoring processes with ps, top, htop, and kill.",
+          "Understanding and managing daemons.",
+          "Systemd and Service Management: Starting, stopping, and managing services with systemctl.",
+          "Creating and managing custom services."
         ]
       },
       {
-        "id": 11,
-        "title": "Environmental Variables",
+        "id": 63,
+        "title": "Networking and Security Essentials",
         "content": [
-          "What are environmental variables in Kubernetes?",
-          "Creating and managing environmental variables for pods."
+          "Network Configuration: Managing IP addresses and network interfaces.",
+          "Tools: ping, netstat, ss, traceroute, and curl.",
+          "Firewall Management: Configuring iptables and firewalld.",
+          "Securing services with SELinux or AppArmor.",
+          "SSH Configuration: Securing and managing SSH connections.",
+          "Using SSH keys for passwordless authentication."
         ]
       },
       {
-        "id": 12,
-        "title": "Storage Management",
+        "id": 64,
+        "title": "File Systems and Storage Management",
         "content": [
-          "Different types of storage in Kubernetes: Persistent Volumes (PV), Persistent Volume Claims (PVC), and Storage Classes (SC).",
-          "Creating and using PVC and PV.",
-          "Dynamic provisioning and using NFS in Storage Classes for persistent data."
+          "File System Basics: Partitioning and formatting disks with fdisk, parted, and mkfs.",
+          "Mounting and unmounting file systems.",
+          "LVM and RAID: Managing logical volumes with LVM.",
+          "Configuring software RAID for redundancy.",
+          "File System Troubleshooting: Using tools like fsck, df, and du.",
+          "Diagnosing disk space issues."
         ]
       },
       {
-        "id": 13,
-        "title": "Deployments",
+        "id": 65,
+        "title": "Automation and Scripting",
         "content": [
-          "What are Kubernetes deployments and different deployment strategies?",
-          "Understanding Rollout and Rollback strategies, including Recreate and Rolling Update.",
-          "Deploying Pods using deployment strategies."
+          "Introduction to Shell Scripting: Writing and executing basic shell scripts.",
+          "Using variables, loops, and conditionals.",
+          "Automating Tasks with Cron and At: Scheduling recurring jobs with cron.",
+          "One-time job scheduling with at.",
+          "Industry Use Cases: Automating system updates and backups.",
+          "Custom scripts for monitoring and alerting."
         ]
       },
       {
-        "id": 14,
-        "title": "Secrets and Config Management",
+        "id": 66,
+        "title": "Package Management and Software Installation",
         "content": [
-          "Understanding Secrets in Kubernetes: How to use and manage secrets securely.",
-          "Introduction to Kustomize for managing multi-container pods (e.g., WordPress & MariaDB).",
-          "Creating and managing ConfigMaps for configuration management."
+          "Package Managers Overview: Managing software with apt, yum, and dnf.",
+          "Installing, updating, and removing packages.",
+          "Source-Based Installation: Compiling and installing software from source.",
+          "Managing dependencies with tools like make and gcc."
         ]
       },
       {
-        "id": 15,
-        "title": "Namespaces",
+        "id": 67,
+        "title": "Monitoring and Performance Tuning",
         "content": [
-          "Understanding and creating Kubernetes namespaces.",
-          "Managing resources within specific namespaces.",
-          "Authentication in Kubernetes and managing user access"
+          "Monitoring Tools: Using vmstat, iostat, and sar for performance monitoring.",
+          "Log management with journalctl and rsyslog.",
+          "Performance Optimization: Tuning kernel parameters with sysctl.",
+          "Optimizing disk I/O and memory usage."
         ]
       },
       {
-        "id": 16,
-        "title": "Authentication & API Server",
+        "id": 68,
+        "title": "Security and Compliance",
         "content": [
-          "Understanding the Kubernetes API server and authentication mechanisms.",
-          "Managing Kubernetes contexts, config files, and key types.",
-          "Role-based Access Control (RBAC) for secure access management.",
-          "Practical on creating a Red Hat Enterprise Linux (RHEL-9) client for Kubernetes."
-        ]
-      },
-      {
-        "id": 17,
-        "title": "Networking",
-        "content": [
-          "Understanding Ingress Controllers and path-based routing.",
-          "Setting up local DNS and network policies for controlling pod communication.",
-          "Filtering network packets and managing source/destination ports."
-        ]
-      },
-      {
-        "id": 18,
-        "title": "Design Patterns and Logs",
-        "content": [
-          "Exploring design patterns for pods, including sidecar and ambassador patterns.",
-          "Log management in Kubernetes: Viewing and managing logs in Apache Web Server.",
-          "Changing log formats and handling logging in Kubernetes environments."
-        ]
-      },
-      {
-        "id": 19,
-        "title": "Container Security",
-        "content": [
-          "Understanding user roles (general user vs root user) and pod capabilities.",
-          "Securing containers: Managing capabilities, service accounts, and using tokens.",
-          
-        ]
-      },
-      {
-        "id": 20,
-        "title": "Custom Resources & CRDs",
-        "content": [
-          "Introduction to Custom Resources (CR) and Custom Resource Definitions (CRD).",
-          "Creating and managing custom resources in Kubernetes."
+          "System Hardening: Disabling unnecessary services and ports.",
+          "Applying security patches and updates.",
+          "Auditing and Compliance: Using auditd for tracking system changes.",
+          "Managing logs for compliance and security purposes."
         ]
       }
     ]
@@ -686,110 +670,126 @@ export const modules: Module[] = [
   {
     "id": 9,
     "title": "Module 9",
-    "subtitle": "Linux",
+    "subtitle": "Kubernetes",
     "topics": [
       {
-        "id": 59,
-        "title": "Introduction to Linux for DevOps",
+        "id": 7,
+        "title": "Lab Setup",
         "content": [
-          "Why Linux for DevOps?",
-          "Overview of Linux in cloud, automation, and containerized environments.",
-          "Key distributions used in the industry (Ubuntu, CentOS, RHEL)."
+          "Setting up a Minikube cluster for Kubernetes practice."
         ]
       },
       {
-        "id": 60,
-        "title": "Linux Architecture and Command Line Basics",
+        "id": 8,
+        "title": "Introduction to Kubernetes",
         "content": [
-          "Linux kernel, shell, and file system hierarchy.",
-          "Essential CLI commands for navigation and file management."
+          "Understanding Kubernetes and its components."
         ]
       },
       {
-        "id": 61,
-        "title": "User and Permission Management",
+        "id": 9,
+        "title": "Working with Pods",
         "content": [
-          "User and Group Management: Adding, modifying, and deleting users and groups.",
-          "Understanding /etc/passwd, /etc/group, and /etc/shadow.",
-          "Permissions and Ownership: File and directory permissions (read, write, execute).",
-          "Managing ownership with chown and permissions with chmod.",
-          "Access Control Lists (ACLs) for advanced permission management."
+          "What is a pod and how to create one using the command line and YAML file.",
+          "Interacting with Kubernetes clusters and deleting all pods."
         ]
       },
       {
-        "id": 62,
-        "title": "Process and Service Management",
+        "id": 10,
+        "title": "Labels & Load Balancers",
         "content": [
-          "Managing Processes: Monitoring processes with ps, top, htop, and kill.",
-          "Understanding and managing daemons.",
-          "Systemd and Service Management: Starting, stopping, and managing services with systemctl.",
-          "Creating and managing custom services."
+          "Working with labels and selectors to organize resources.",
+          "Understanding Replication Controllers, Replica Sets, and scaling pods.",
+          "Configuring load balancers and creating Replica Sets."
         ]
       },
       {
-        "id": 63,
-        "title": "Networking and Security Essentials",
+        "id": 11,
+        "title": "Environmental Variables",
         "content": [
-          "Network Configuration: Managing IP addresses and network interfaces.",
-          "Tools: ping, netstat, ss, traceroute, and curl.",
-          "Firewall Management: Configuring iptables and firewalld.",
-          "Securing services with SELinux or AppArmor.",
-          "SSH Configuration: Securing and managing SSH connections.",
-          "Using SSH keys for passwordless authentication."
+          "What are environmental variables in Kubernetes?",
+          "Creating and managing environmental variables for pods."
         ]
       },
       {
-        "id": 64,
-        "title": "File Systems and Storage Management",
+        "id": 12,
+        "title": "Storage Management",
         "content": [
-          "File System Basics: Partitioning and formatting disks with fdisk, parted, and mkfs.",
-          "Mounting and unmounting file systems.",
-          "LVM and RAID: Managing logical volumes with LVM.",
-          "Configuring software RAID for redundancy.",
-          "File System Troubleshooting: Using tools like fsck, df, and du.",
-          "Diagnosing disk space issues."
+          "Different types of storage in Kubernetes: Persistent Volumes (PV), Persistent Volume Claims (PVC), and Storage Classes (SC).",
+          "Creating and using PVC and PV.",
+          "Dynamic provisioning and using NFS in Storage Classes for persistent data."
         ]
       },
       {
-        "id": 65,
-        "title": "Automation and Scripting",
+        "id": 13,
+        "title": "Deployments",
         "content": [
-          "Introduction to Shell Scripting: Writing and executing basic shell scripts.",
-          "Using variables, loops, and conditionals.",
-          "Automating Tasks with Cron and At: Scheduling recurring jobs with cron.",
-          "One-time job scheduling with at.",
-          "Industry Use Cases: Automating system updates and backups.",
-          "Custom scripts for monitoring and alerting."
+          "What are Kubernetes deployments and different deployment strategies?",
+          "Understanding Rollout and Rollback strategies, including Recreate and Rolling Update.",
+          "Deploying Pods using deployment strategies."
         ]
       },
       {
-        "id": 66,
-        "title": "Package Management and Software Installation",
+        "id": 14,
+        "title": "Secrets and Config Management",
         "content": [
-          "Package Managers Overview: Managing software with apt, yum, and dnf.",
-          "Installing, updating, and removing packages.",
-          "Source-Based Installation: Compiling and installing software from source.",
-          "Managing dependencies with tools like make and gcc."
+          "Understanding Secrets in Kubernetes: How to use and manage secrets securely.",
+          "Introduction to Kustomize for managing multi-container pods (e.g., WordPress & MariaDB).",
+          "Creating and managing ConfigMaps for configuration management."
         ]
       },
       {
-        "id": 67,
-        "title": "Monitoring and Performance Tuning",
+        "id": 15,
+        "title": "Namespaces",
         "content": [
-          "Monitoring Tools: Using vmstat, iostat, and sar for performance monitoring.",
-          "Log management with journalctl and rsyslog.",
-          "Performance Optimization: Tuning kernel parameters with sysctl.",
-          "Optimizing disk I/O and memory usage."
+          "Understanding and creating Kubernetes namespaces.",
+          "Managing resources within specific namespaces.",
+          "Authentication in Kubernetes and managing user access"
         ]
       },
       {
-        "id": 68,
-        "title": "Security and Compliance",
+        "id": 16,
+        "title": "Authentication & API Server",
         "content": [
-          "System Hardening: Disabling unnecessary services and ports.",
-          "Applying security patches and updates.",
-          "Auditing and Compliance: Using auditd for tracking system changes.",
-          "Managing logs for compliance and security purposes."
+          "Understanding the Kubernetes API server and authentication mechanisms.",
+          "Managing Kubernetes contexts, config files, and key types.",
+          "Role-based Access Control (RBAC) for secure access management.",
+          "Practical on creating a Red Hat Enterprise Linux (RHEL-9) client for Kubernetes."
+        ]
+      },
+      {
+        "id": 17,
+        "title": "Networking",
+        "content": [
+          "Understanding Ingress Controllers and path-based routing.",
+          "Setting up local DNS and network policies for controlling pod communication.",
+          "Filtering network packets and managing source/destination ports."
+        ]
+      },
+      {
+        "id": 18,
+        "title": "Design Patterns and Logs",
+        "content": [
+          "Exploring design patterns for pods, including sidecar and ambassador patterns.",
+          "Log management in Kubernetes: Viewing and managing logs in Apache Web Server.",
+          "Changing log formats and handling logging in Kubernetes environments."
+        ]
+      },
+      {
+        "id": 19,
+        "title": "Container Security",
+        "content": [
+          "Understanding user roles (general user vs root user) and pod capabilities.",
+          "Securing containers: Managing capabilities, service accounts, and using tokens.",
+          
+        ]
+      },
+      {
+        "id": 20,
+        "title": "Custom Resources & CRDs",
+        "content": [
+          "Introduction to Custom Resources (CR) and Custom Resource Definitions (CRD).",
+          "Creating and managing custom resources in Kubernetes."
         ]
       }
     ]

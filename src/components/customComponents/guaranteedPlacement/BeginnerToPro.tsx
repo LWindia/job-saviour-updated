@@ -18,7 +18,7 @@ export default function BeginnerToPro() {
               </h1>
               <p className="text-sm sm:text-md text-muted-foreground max-w-[700px] mx-auto lg:mx-0">
                
-With a DevOps Initiative designed and taught by industry expert - Mr Vimal Daga, you will get step by step learning from basic to advanced level and mentorship for guaranteed success.
+With a DevOps Initiative designed and taught by industry expert , you will get step by step learning from basic to advanced level and mentorship for guaranteed success.
 
               </p>
             </div>

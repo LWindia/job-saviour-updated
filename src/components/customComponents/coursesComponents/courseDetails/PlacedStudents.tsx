@@ -258,7 +258,7 @@ const PlacedStudents = () => {
                     <span className="text-[#ff0000]"> So can you!</span>
                     </h1>
                     <h1 className="text-sm sm:text-lg text-black font-semibold pt-2 mb-8">
-                      Learn - Build - Lead with <span className="text-[#ff0000]">Mr Vimal Daga</span>
+                      Learn - Build - Lead with <span className="text-[#ff0000]">expert Industry Mentors</span>
                     </h1>
             
                     <div className={styles.slider}>
