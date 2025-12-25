@@ -28,4 +28,8 @@ jobs:
 
     - name: Build project
       run: npm run build
+      env:
+        NEXT_PUBLIC_GOOGLE_SCRIPT_URL: ${{ secrets.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || '' }}
+        SMTP_USER: ${{ secrets.SMTP_USER || 'linuxworld.certificates@gmail.com' }}
+        EMAIL_PASS: ${{ secrets.EMAIL_PASS || '' }}
 
