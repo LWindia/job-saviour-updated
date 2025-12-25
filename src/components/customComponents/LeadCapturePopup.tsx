@@ -42,66 +42,48 @@ export default function LeadCapturePopup({
     lastScrollYRef.current = window.scrollY || 0;
     setIsOpen(false);
 
-    const setupScrollListener = () => {
-      if (typeof window === 'undefined' || hasShownRef.current) {
+    const handleScroll = () => {
+      if (hasShownRef.current) {
         return;
       }
 
-      const handleScroll = () => {
-        if (hasShownRef.current || isOpen) {
-          return;
+      const currentScrollY = window.scrollY;
+      const scrollDifference = Math.abs(currentScrollY - lastScrollYRef.current);
+      
+      // Count scroll events (minimum 50px scroll)
+      if (scrollDifference > 50) {
+        scrollEventsRef.current++;
+        lastScrollYRef.current = currentScrollY;
+
+        // Show popup after 2 scrolls
+        if (scrollEventsRef.current >= 2) {
+          setIsOpen(true);
+          hasShownRef.current = true;
+          window.removeEventListener('scroll', handleScroll);
         }
-
-        const currentScrollY = window.scrollY;
-        const scrollDifference = Math.abs(currentScrollY - lastScrollYRef.current);
-        
-        // Count scroll events (minimum 50px scroll)
-        if (scrollDifference > 50) {
-          scrollEventsRef.current++;
-          lastScrollYRef.current = currentScrollY;
-
-          // Show popup after 2 scrolls
-          if (scrollEventsRef.current >= 2) {
-            setIsOpen(true);
-            hasShownRef.current = true;
-            // Remove scroll listener once popup is shown
-            if (scrollListenerRef.current) {
-              window.removeEventListener('scroll', scrollListenerRef.current);
-              scrollListenerRef.current = null;
-            }
-          }
-        }
-      };
-
-      scrollListenerRef.current = handleScroll;
-      window.addEventListener('scroll', handleScroll, { passive: true });
+      }
     };
 
     // Set up scroll listener after a short delay
     const setupTimer = setTimeout(() => {
-      setupScrollListener();
-    }, 500);
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }, 1000);
 
-    // Fallback: Show popup after 15 seconds if user hasn't scrolled enough
+    // Fallback: Show popup after 5 seconds if user hasn't scrolled enough
     const fallbackTimer = setTimeout(() => {
       if (!hasShownRef.current) {
         setIsOpen(true);
         hasShownRef.current = true;
-        if (scrollListenerRef.current) {
-          window.removeEventListener('scroll', scrollListenerRef.current);
-          scrollListenerRef.current = null;
-        }
+        window.removeEventListener('scroll', handleScroll);
       }
-    }, 15000);
+    }, 5000);
 
     return () => {
       clearTimeout(setupTimer);
       clearTimeout(fallbackTimer);
-      if (scrollListenerRef.current) {
-        window.removeEventListener('scroll', scrollListenerRef.current);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [isOpen]);
+  }, []); // Empty dependency array - only run once on mount
 
 
   // Ensure popup is visible when opened
@@ -113,10 +95,12 @@ export default function LeadCapturePopup({
       // Set overlay style
       const overlay = document.querySelector('[data-radix-dialog-overlay]') as HTMLElement;
       if (overlay) {
-        overlay.style.backgroundColor = 'rgba(255, 0, 0, 0.8)';
-        overlay.style.zIndex = '9998';
-        overlay.style.position = 'fixed';
-        overlay.style.inset = '0';
+        overlay.style.setProperty('background-color', 'rgba(0, 0, 0, 0.8)', 'important');
+        overlay.style.setProperty('z-index', '9998', 'important');
+        overlay.style.setProperty('position', 'fixed', 'important');
+        overlay.style.setProperty('inset', '0', 'important');
+        overlay.style.setProperty('display', 'block', 'important');
+        overlay.style.setProperty('opacity', '1', 'important');
       }
 
       // Set content style - ensure it's visible
@@ -137,24 +121,24 @@ export default function LeadCapturePopup({
       }
     };
 
-    // Try immediately
+    // Try immediately and multiple times to ensure it works
     ensureVisibility();
-
-    // Try after a short delay
     const timer1 = setTimeout(ensureVisibility, 10);
-    const timer2 = setTimeout(ensureVisibility, 100);
-    const timer3 = setTimeout(ensureVisibility, 200);
+    const timer2 = setTimeout(ensureVisibility, 50);
+    const timer3 = setTimeout(ensureVisibility, 100);
+    const timer4 = setTimeout(ensureVisibility, 200);
 
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
+      clearTimeout(timer4);
     };
   }, [isOpen]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev: typeof formData) => ({
       ...prev,
       [name]: value
     }));
@@ -233,9 +217,14 @@ export default function LeadCapturePopup({
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={(open: boolean) => {
+      setIsOpen(open);
+      if (!open) {
+        setSubmitStatus('idle');
+      }
+    }}>
       <DialogContent 
-        className="sm:max-w-[500px] bg-white p-8 rounded-lg border-2 border-[#ff0000] shadow-2xl [&>button]:hidden relative"
+        className="sm:max-w-[500px] bg-white p-8 rounded-lg border-2 border-[#ff0000] shadow-2xl relative [&>button:first-child]:hidden"
         style={{ 
           zIndex: 9999,
           opacity: 1,
