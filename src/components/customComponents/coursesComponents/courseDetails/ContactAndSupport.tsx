@@ -68,24 +68,33 @@ export default function QueryForm() {
 
     if (!validateForm()) return;
 
+    const googleScriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || '';
+
+    if (!googleScriptUrl) {
+      setErrorMessage("Form submission is not configured. Please contact support.");
+      return;
+    }
+
     setLoading(true);
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(googleScriptUrl, {
         method: "POST",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          fullName: formData.fullName.trim(),
+          email: formData.email.trim(),
+          whatsappNumber: formData.whatsappNumber.trim(),
+          city: formData.city.trim(),
+          timestamp: new Date().toISOString(),
+        }),
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to send the message. Please try again.");
-      }
-
-      setSuccessMessage(data.message || "Your query has been submitted successfully!");
+      // With no-cors mode, we can't read the response, but assume success
+      setSuccessMessage("Your query has been submitted successfully!");
       setFormData({
         fullName: "",
         email: "",
@@ -93,7 +102,8 @@ export default function QueryForm() {
         city: "",
       });
     } catch (error: any) {
-      setErrorMessage(error.message || "Something went wrong. Please try again later.");
+      console.error('Error submitting form:', error);
+      setErrorMessage("Something went wrong. Please try again later.");
     } finally {
       setLoading(false);
     }
