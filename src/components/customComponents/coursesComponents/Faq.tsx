@@ -17,11 +17,11 @@ const faqContent: Record<string, FAQItem[]> = {
     {
       question: "What is the Placement Guaranteed DevOps Initiative?",
       answer:
-        "The One & Only Placement Guaranteed DevOps Initiative which has companies before hand who are ready to hire Freshers from LinuxWorld as DevOps Engineer. To fulfill those companies requirements, LinuxWorld has come up with this exclusive Placement Guaranteed DevOps Initiative exclusively for 2024/2025 passouts.",
+        "The One & Only Placement Guaranteed DevOps Initiative which has companies before hand who are ready to hire Freshers from LinuxWorld as DevOps Engineer. To fulfill those companies requirements, LinuxWorld has come up with this exclusive Placement Guaranteed DevOps Initiative exclusively for 2024/2025/2026 passouts.",
     },
     {
       question: "What skills will I gain during the Initiative?",
-      answer: "The Job Guaranteed Initiative is a process consisting of 14+ Technical DevOps Tools & Technologies along with the same we have a complete Career Track focusing on developing non-technical (soft skills) as well. Don’t miss checking out the section for Let's walk you through the journey of Placement Guaranteed DevOps Initiative by LinuxWorld",
+      answer: "The Job Guaranteed Initiative is a process consisting of 17+ Technical DevOps Tools & Technologies along with the same we have a complete Career Track focusing on developing non-technical (soft skills) as well. Don't miss checking out the section for Let's walk you through the journey of Placement Guaranteed DevOps Initiative by LinuxWorld",
 
     },
     {
@@ -30,7 +30,7 @@ const faqContent: Record<string, FAQItem[]> = {
     },
     {
       question: " How is this initiative structured?",
-      answer: "The Job Guaranteed Initiative is a process consisting of 14+ Technical DevOps Tools & Technologies along with the same we have a complete Career Track focusing on developing non-technical (soft skills) as well. Don’t miss checking out the section for Let's walk you through the journey of Placement Guaranteed DevOps Initiative by LinuxWorld",
+      answer: "The Job Guaranteed Initiative is a process consisting of 17+ Technical DevOps Tools & Technologies along with the same we have a complete Career Track focusing on developing non-technical (soft skills) as well. Don't miss checking out the section for Let's walk you through the journey of Placement Guaranteed DevOps Initiative by LinuxWorld",
 
     },
   
@@ -40,7 +40,7 @@ const faqContent: Record<string, FAQItem[]> = {
       answer:
       ( <ul className="list-disc list-inside mt-2 space-y-1">
         The Placement Guarantee Initiative is designed for:
-        <li>Final-year undergraduate or graduate students ( 2024 or 2025 batch Only).</li>
+        <li>Final-year undergraduate or graduate students ( 2024, 2025, or 2026 batch Only).</li>
         <li> Fresh graduates who have recently completed their degree.</li>
         <li>Individuals with a keen interest in building a career in the relevant field and are ready to commit to the program requirements.</li>
        <li>If you're looking to enhance your skills and secure a job, this initiative is perfect for you!</li>
@@ -185,7 +185,7 @@ const faqContent: Record<string, FAQItem[]> = {
       answer:
       ( <ul className="list-disc list-inside mt-2 space-y-1">
         The Placement Guarantee initiative is designed for:
-        <li>Final-year undergraduate or graduate students (2024 or 2025 batch Only).</li>
+        <li>Final-year undergraduate or graduate students (2024, 2025, or 2026 batch Only).</li>
         <li> Fresh graduates who have recently completed their degree.</li>
         <li>Individuals with a keen interest in building a career in the relevant field and are ready to commit to the program requirements.</li>
        <li>If you're looking to enhance your skills and secure a job, this initiative is perfect for you!</li>
@@ -196,7 +196,7 @@ const faqContent: Record<string, FAQItem[]> = {
    
     {
       question: "I have more than 3 years of work experience in a different field and now I want to switch to Devops, can I apply?",
-      answer:  "This program is not the best fit for you. This initiative is available for the 2024 and 2025 batches. However, we offer a professional initiative designed for people with work experience who want to switch to DevOps. Please check out our professional initiative for more details!"
+      answer:  "This program is not the best fit for you. This initiative is available for the 2024, 2025, and 2026 batches. However, we offer a professional initiative designed for people with work experience who want to switch to DevOps. Please check out our professional initiative for more details!"
     },
    
   ],

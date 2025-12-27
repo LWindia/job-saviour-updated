@@ -88,7 +88,7 @@ export default function ProgramCohorts() {
               <div className="flex gap-3">
                 <GraduationCap className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <p className="text-sm text-black">
-                  Open to all technical students pursuing B.Tech | BCA | MCA | M.Tech | B.Sc IT - 2024 & 2025 passouts
+                  Open to all technical students pursuing B.Tech | BCA | MCA | M.Tech | B.Sc IT - 2024, 2025 & 2026 passouts
                 </p>
               </div>
               <div className="flex gap-3">

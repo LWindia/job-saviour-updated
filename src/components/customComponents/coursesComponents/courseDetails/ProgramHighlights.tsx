@@ -5,7 +5,7 @@ const ProgramHighlights = () => {
   const highlights = [
     {
       icon: "/assets/ExtraLogo/modules.png",
-      number: "14+",
+      number: "17+",
       description: "Hands on Modules",
     },
     {

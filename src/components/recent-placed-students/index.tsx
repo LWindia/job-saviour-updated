@@ -28,7 +28,7 @@ export function RecentPlacedStudents() {
   const cardData: CardData[] = [
     {
       title: "42+ students shortlisted for Deloitte",
-      description: "  as Fresher DevOps Engineer : 2024/2025 passouts from our previous DevOps batch",
+      description: "  as Fresher DevOps Engineer : 2024/2025/2026 passouts from our previous DevOps batch",
       imageUrl: deloitte.src
     },
     {
@@ -39,7 +39,7 @@ export function RecentPlacedStudents() {
     {
       
       title: "46+ students shortlisted for Signzy  ",
-      description: "as DevOps Engineer - Freshers 2024-2025 passouts from our previous DevOps batch",
+      description: "as DevOps Engineer - Freshers 2024-2025-2026 passouts from our previous DevOps batch",
       imageUrl: singzy.src
     },
   

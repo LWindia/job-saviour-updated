@@ -34,7 +34,7 @@ export default function ProgramCohorts() {
             <div className="flex flex-wrap items-center gap-3">
               <h3 className="text-md sm:text-lg text-black font-semibold">
                 Full Stack Development using MERN Globally Recognized Initiative
-                2025
+                2025/2026
               </h3>
               <span className="px-3 py-1 bg-orange-100 text-orange-600 text-sm rounded-full">
                 Limited Seats available
@@ -114,7 +114,7 @@ export default function ProgramCohorts() {
                 <GraduationCap className="w-5 h-5 text-red-500 flex-shrink-0" />
                 <p className="text-sm text-black">
                   Open to all technical students pursuing B.Tech | BCA | MCA |
-                  M.Tech | B.Sc IT – 2024 & 2025 passouts
+                  M.Tech | B.Sc IT – 2024, 2025 & 2026 passouts
                 </p>
               </div>
               <div className="flex gap-3">

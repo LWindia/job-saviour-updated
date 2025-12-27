@@ -27,7 +27,7 @@ export default function ProgramCohorts() {
             {/* Card Header */}
             <div className="flex flex-wrap items-center gap-3">
               <h3 className="text-md pt-2 sm:text-lg text-black font-semibold">
-                LW Career Switch / Salary Hike Oriented DevOps Globally Recognized Initiative 2025
+                LW Career Switch / Salary Hike Oriented DevOps Globally Recognized Initiative 2025/2026
               </h3>
               <span className="px-3 py-1 bg-orange-100 text-orange-600 text-sm rounded-full">
                 Limited Seats available

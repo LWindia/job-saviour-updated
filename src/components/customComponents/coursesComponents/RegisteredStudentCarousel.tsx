@@ -31,7 +31,7 @@ export function RegisteredStudentCarousel() {
               style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} 
             />
            &nbsp; </span>  </div>
-        <div className="text-gray-500">Becoming a part of Placement Guaranteed Initiative 2025</div>
+        <div className="text-gray-500">Becoming a part of Placement Guaranteed Initiative 2025/2026</div>
       </div>
       <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
